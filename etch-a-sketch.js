@@ -2,13 +2,21 @@ const grid = document.querySelector('.grid-container');
 
 
 function createGrid() {
-    const gridDiv = document.createElement('div');
-    gridDiv.setAttribute('class', 'grid-square');
-    gridDiv.textContent = i;
-    grid.appendChild(gridDiv);
+    const gridSqaureDiv = document.createElement('div');
+    gridSqaureDiv.setAttribute('class', 'grid-square');
+    gridSqaureDiv.textContent = i;
+    grid.appendChild(gridSqaureDiv);
+
 }
 i = 1;
-while (i <= 256) {
+while (i <= 10) {
     createGrid();
     i++;
 }
+const sqaureHover = document.querySelectorAll('.grid-square');
+
+sqaureHover.forEach(function(hover){
+    hover.addEventListener('mouseover', function(e){
+       hover.style.background = "red";
+    })
+})

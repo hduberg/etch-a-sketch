@@ -5,14 +5,15 @@ body{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
+    margin: 1vw;
+  
 }
 
 .grid-square{
+
     display: grid;
     align-content: center;
     justify-content: center;
-    height: 3em;
-    width: 3em;
-   
-
+    height: 10vh;
+    width: 10vw%;
 }
