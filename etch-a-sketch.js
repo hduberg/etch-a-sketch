@@ -3,7 +3,7 @@ const grid = document.querySelector('.grid-container');
 
 function createGrid() {
     const gridDiv = document.createElement('div');
-    gridDiv.setAttribute('class', 'grid-Square');
+    gridDiv.setAttribute('class', 'grid-square');
     gridDiv.textContent = i;
     grid.appendChild(gridDiv);
 }
