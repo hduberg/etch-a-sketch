@@ -2,13 +2,26 @@
 <html>
 
 <head>
-    <title>Etch a sketch</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="header">etch-a-sketch</div>
-    <div class="grid-container"></div>
+    <div class="section">
+        <h1 class="header-text">Etch-a-Sketch</h1>
+        <div class="buttons">
+            <button class="btn, btn-black">Black</button>
+            <button>Grey</button>
+            <button>White</button>
+            <button>All Colours</button>
+            <button>Reset</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Size of grid" value="16"/>
+            <button>Set size</button>
+        </div>
+        <div class="grid-container"></div>
+    </div>
 
     <script src="etch-a-sketch.js" defer=""></script>
 </body>

@@ -1,19 +1,85 @@
-body{
-    background-color: rgb(255, 231, 208);
+body {
+    background-color: rgb(255, 253, 224);
 }
-.grid-container{
+
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    margin: 1vw;
-  
+    justify-content: center;
+    justify-self: center;
+    background-color: white;
 }
 
-.grid-square{
-
+.grid-square {
     display: grid;
     align-content: center;
     justify-content: center;
-    height: 10vh;
-    width: 10vw%;
 }
+
+.section {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+   
+}
+
+.btn {
+    margin: 1vh;
+    margin-bottom: 3vh;
+    background-color: rgba(160, 79, 79, 0.443);
+    border: 1px solid grey;
+    border-radius: 50%;
+    height: 5vh;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(205, 205, 205, 0.5);
+}
+
+.btn-black{
+    background-color: black;
+    color: white;
+}
+
+.btn-grey{
+    background-color: grey;
+    color: white;
+}
+
+.btn-rgb{
+    animation-name: backgroundColorPalette;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.btn-rgb:hover{
+    animation: none;
+}
+
+.btn-reset{
+ background-color: beige;
+}
+
+@keyframes backgroundColorPalette {
+    0% {
+      background: #ff837a;
+    }
+    25% {
+      background: #00ff73;
+    }
+    50% {
+      background: #55ff00;
+    }
+    75% {
+      background: #ffff00;
+    }
+    100% {
+      background: #00e1ff;
+    }
+  }
+
