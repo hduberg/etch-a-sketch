@@ -7,20 +7,26 @@
 </head>
 
 <body>
+    <div class="header-text">
+        <h1>Etch-a-Sketch</h1>
+        <h2>Choose a color to begin</h2>
+    </div>
+
     <div class="section">
-        <h1 class="header-text">Etch-a-Sketch</h1>
         <div class="buttons">
-            <button class="btn, btn-black">Black</button>
-            <button>Grey</button>
-            <button>White</button>
-            <button>All Colours</button>
-            <button>Reset</button>
+            <div class="input-container">
+                <input type="text" placeholder="Enter number" value="" onchange="resizeCanvas(this.value)" />
+                <button class="btn-resize">Resize Canvas</button>
+            </div>
+            <button class="btn btn-black" onclick="blackColor()">Black</button>
+            <button class="btn btn-gradient-black" onclick="gradientBlackColor()">Gradient Black</button>
+            <button class="btn btn-grey" onclick="greyColor()">Grey</button>
+            <button class="btn btn-white" onclick="whiteColor()">Erase</button>
+            <button class="btn btn-rgb" onclick="allColors()">All Colors</button>
+            <button class="btn btn-reset" onclick="resetCanvas()">Reset</button>
         </div>
-        <div>
-            <input type="text" placeholder="Size of grid" value="16"/>
-            <button>Set size</button>
+        <div class="grid-container">
         </div>
-        <div class="grid-container"></div>
     </div>
 
     <script src="etch-a-sketch.js" defer=""></script>

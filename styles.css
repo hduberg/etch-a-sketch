@@ -1,85 +1,164 @@
 body {
-    background-color: rgb(255, 253, 224);
+  background-color: rgb(255, 253, 224);
+}
+
+.header-text{
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  font-size: 2vh;
+}
+
+.header-text h1{
+  margin: 1vh;
+}
+.header-text h2{
+  margin: 1vh;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  align-self: start;
 }
 
 .grid-container {
-    display: grid;
-    justify-content: center;
-    justify-self: center;
-    background-color: white;
+  display: grid;
+  justify-content: left;
+  justify-self: left;
+  background-color: white;
+  height: 550px;
+  width: 550px;
+  justify-content: top;
 }
 
 .grid-square {
-    display: grid;
-    align-content: center;
-    justify-content: center;
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 
 .section {
-    margin-top: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    
-   
+  margin-top: 2vh;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .btn {
-    margin: 1vh;
-    margin-bottom: 3vh;
-    background-color: rgba(160, 79, 79, 0.443);
-    border: 1px solid grey;
-    border-radius: 50%;
-    height: 5vh;
+  margin: 1vh;
+  background-color: rgba(160, 79, 79, 0.443);
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: fit-content;
+  justify-self: right;
+  padding: 1vw;
 }
 
-.btn:hover{
-    cursor: pointer;
-    background-color: rgba(205, 205, 205, 0.5);
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(205, 205, 205, 0.5);
 }
 
-.btn-black{
-    background-color: black;
-    color: white;
+.btn-black {
+  background-color: black;
+  color: white;
 }
 
-.btn-grey{
-    background-color: grey;
-    color: white;
+.btn-gradient-black{
+  padding-left: .4vw;
+  background-color: #ffffff;
+  text-align: center;
+  animation-name: backgroundColorBlack;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction:alternate;
 }
 
-.btn-rgb{
-    animation-name: backgroundColorPalette;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+.btn-grey {
+  background-color: grey;
+  color: white;
 }
 
-.btn-rgb:hover{
-    animation: none;
+.btn-white {
+  background-color: white;
 }
 
-.btn-reset{
- background-color: beige;
+.btn-rgb {
+  animation-name: backgroundColorPalette;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  padding-left: .9vw;
+}
+
+.btn-rgb:hover {
+  animation: none;
+}
+
+.btn-reset {
+  background-color: beige;
+
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-content: center;
+  margin: 2vh 1.3vh 1vh 2vh;
+  justify-self: right;
+}
+
+.btn-resize {
+  background-color: rgba(160, 79, 79, 0.443);
+  border: 1px solid grey;
+  border-radius: 50%;
+  max-height: 5vh;
+  justify-self: right;
+  margin-top: 1vh;
+  width: fit-content;
+  
+}
+
+.btn-resize:hover {
+  cursor: pointer;
+  background-color: rgba(205, 205, 205, 0.5);
 }
 
 @keyframes backgroundColorPalette {
-    0% {
-      background: #ff837a;
-    }
-    25% {
-      background: #00ff73;
-    }
-    50% {
-      background: #55ff00;
-    }
-    75% {
-      background: #ffff00;
-    }
-    100% {
-      background: #00e1ff;
-    }
+  0% {
+    background: #ff837a;
   }
 
+  25% {
+    background: #00ff73;
+  }
+
+  50% {
+    background: #55ff00;
+  }
+
+  75% {
+    background: #ffff00;
+  }
+
+  100% {
+    background: #00e1ff;
+  }
+}
+
+@keyframes backgroundColorBlack {
+  100% {
+    background: #ffffff;
+  }
+
+  25% {
+    background: #363636;
+  }
+
+
+
+}
